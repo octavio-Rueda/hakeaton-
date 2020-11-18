@@ -1,18 +1,14 @@
-<div class="card text-center">
+<div class="card  shadow-lg p-3 mb-5 bg-white rounded">
   <div class="card-header">
     
 <div class="card-panel text-white bg-info  border rounded mb-4" >
-  <h4 class="text-center p-3 text-white">List sites</h4>
+  <h3 class="text-center p-3 text-white">SITIOS</h3>
 </div>
-
   </div>
   <div class="card-body">
-  
-
-
 <div class="row">
   <div class="col-md-6" *ngFor="let site of sites">
-  <mat-card class="example-card" >
+  <mat-card class="example-card shadow-lg p-3 mb-5 bg-white rounded" >
     <mat-card-header>
       <!-- <div mat-card-avatar class="example-header-image"></div> -->
       <mat-card-title>{{site.name}}</mat-card-title>
@@ -30,14 +26,15 @@
       </p>
     </mat-card-content>
     <mat-card-actions>
-      <button mat-button>LIKE</button>
-      <button mat-button>SHARE</button>
+      <button mat-button [matMenuTriggerFor]="menu" ><h3>=</h3></button>
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item routerLink="/add_sites">CALIFICAR</button>
+      </mat-menu>
     </mat-card-actions>
   </mat-card>
   </div>
+</div>      
 </div>
-      
-  </div>
 </div>
 
 

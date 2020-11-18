@@ -10,6 +10,7 @@ import { SiteInterestComponent } from './site-interest/site-interest.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material/material';
 import { ListSitesComponent } from './list-sites/list-sites.component';
+import { CalificacionComponent } from './Calificacion/calificacion/calificacion.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { ListSitesComponent } from './list-sites/list-sites.component';
     HomeComponent,
     SiteInterestComponent,
     ListSitesComponent,
+    CalificacionComponent,
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
