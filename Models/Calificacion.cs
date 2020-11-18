@@ -12,6 +12,9 @@ namespace WebGuiaCesar.Models
         [JsonProperty("Name")]
         public string Nombre { get; set; }
 
+         [JsonProperty("Puntuacion")]
+        public int  Puntuacion { get; set; }
+
 
     }
 }

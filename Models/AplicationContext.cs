@@ -11,5 +11,6 @@ namespace WebGuiaCesar.Models{
         base(options){}
     
         public DbSet<GalleryImageResponse> GalleryImageResponse { get; set; }
+         public DbSet<Calificacion> calificacions { get; set; }
     }
 }

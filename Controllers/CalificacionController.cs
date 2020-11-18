@@ -4,11 +4,12 @@ using System.IO;
 using System.Threading.Tasks;
 using WebGuiaCesar.Models;
 
+
 namespace WebGuiaCesar.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class CalificacionController
+    public class CalificacionController : ControllerBase
     {
      
         private IWebHostEnvironment _env;
@@ -18,6 +19,22 @@ namespace WebGuiaCesar.Controllers
             _env = env;
             this._context = context;
         }
+
+            [HttpPost]
+        public async Task<IActionResult> OnPostUploadAsync([FromForm]Calificacion model)
+        {
+            var response = new Calificacion();
+            response.Nombre = model.Nombre; 
+            response.Puntuacion= model.Puntuacion; 
+           
+
+            
+            _context.calificacions.Add(response);
+            await _context.SaveChangesAsync();
+            return Ok(response);
+        }
+
+
 
 
          

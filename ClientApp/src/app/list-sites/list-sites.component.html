@@ -28,7 +28,7 @@
     <mat-card-actions>
       <button mat-button [matMenuTriggerFor]="menu" ><h3>=</h3></button>
       <mat-menu #menu="matMenu">
-        <button mat-menu-item routerLink="/add_sites">CALIFICAR</button>
+        <button mat-menu-item data-toggle="modal" data-target="#modalSocial">CALIFICAR</button>
       </mat-menu>
     </mat-card-actions>
   </mat-card>
@@ -38,6 +38,54 @@
 </div>
 
 
+
+
+
+
+
+<!-- Button trigger modal-->
+<!--Modal: modalSocial-->
+<div class="modal fade" id="modalSocial" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog cascading-modal" role="document">
+
+    <!--Content-->
+    <div class="modal-content">
+
+      <!--Header-->
+      <div class="modal-header light-blue darken-3 white-text">
+        <h4 class="title  text-center"><i class="fas fa-users "></i> MI CALIFICACION</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+            aria-hidden="true">&times;</span></button>
+      </div>
+
+      <!--Body-->
+      <div class="modal-body mb-0 text-center">
+        <form>
+          <p class="clasificacion">
+            <input id="radio1" type="radio" name="estrellas" value="5"   ><!--
+            --><label for="radio1">★</label><!--
+            --><input id="radio2" type="radio" name="estrellas" value="4" ><!--
+            --><label for="radio2">★</label><!--
+            --><input id="radio3" type="radio" name="estrellas" value="3" ><!--
+            --><label for="radio3">★</label><!--
+            --><input id="radio4" type="radio" name="estrellas" value="2" ><!--
+            --><label for="radio4">★</label><!--
+            --><input id="radio5" type="radio" name="estrellas" value="1" ><!--
+            --><label for="radio5">★</label>
+          </p>
+          <div class="form-group">
+            <h1 id="nombre" >Nombre</h1>
+            <input type="text" class="form-control">
+          </div>
+          <button type="submit" class="btn btn-primary mb-5" >Guardar</button>
+        </form>
+      </div>
+    </div>
+    <!--/.Content-->
+  </div>
+</div>
+<!--Modal: modalSocial-->
 
 
 
